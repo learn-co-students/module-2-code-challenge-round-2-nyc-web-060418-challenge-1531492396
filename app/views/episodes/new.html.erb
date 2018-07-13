@@ -1,0 +1,21 @@
+<h1> Create a New Episode </h1>
+
+<%= form_for @episode do |f| %>
+<%= f.label "Number:" %>
+<%= f.text_field :number %>
+<br>
+<br>
+<%= f.label "Guest_Rating:" %>
+<%= f.text_field :guest_rating %>
+<br>
+<%= f.label "Episode:" %>
+<%= f.collection_select :episode_id, Episode.all, :id, :number %>
+<br>
+<%= f.label "Guest:" %>
+<%= f.collection_select :guest_id, Guest.all, :id, :name %>
+<%= f.submit %>
+<br>
+<%= f.label "Add a Rating: 1 - 5" %>
+<%= f.text_field :guest_rating %>
+<%= f.submit %>
+<% end %>
