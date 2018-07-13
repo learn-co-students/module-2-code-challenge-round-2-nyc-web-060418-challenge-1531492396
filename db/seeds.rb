@@ -25,3 +25,5 @@ date = Date.parse('2015-09-08')
   date = date.next
 end
 
+david = Guest.new(name: "David Alan Grier", occupation: "Actor")
+william = Guest.new(name: "William Baldwin", occupation: "Actor")
